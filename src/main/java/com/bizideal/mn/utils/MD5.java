@@ -11,7 +11,7 @@ import java.security.MessageDigest;
 public class MD5 {
 
 	/**
-	 * 生成md5，提交测试1
+	 * 生成md5，提交测试189981212
 	 * 
 	 * @param message
 	 * @return
