@@ -29,7 +29,7 @@ public class MyAccessDeniedHandlerImpl implements AccessDeniedHandler {
 	}
 
 	public void setAccessDeniedUrl(String accessDeniedUrl) {
-		this.accessDeniedUrl = accessDeniedUrl;
+		this.accessDeniedUrl = accessDeniedUrl; 
 	}
 
 	public MyAccessDeniedHandlerImpl(String accessDeniedUrl) {
