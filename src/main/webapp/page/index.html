@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>	
+	<a th:href="@{/t/f}">click</a><br/>
+	<a th:href="@{/js/jquery-1.10.2.min.js}">a</a><br/>
+	<button id="b">button</button>
+	<button id="c">403测试</button>
+</body>
+<script type="text/javascript" th:src="@{/js/jquery-1.10.2.min.js}" ></script>
+<script type="text/javascript">
+$(function(){
+	$('#b').click(function(){
+		$.ajax({
+			url:'http://10.1.0.18:8080/demo/t/t',
+			type:"post",
+// 			xhrFields: {
+// 		        withCredentials: true
+// 		    },
+			beforeSend: function(request) {
+                request.setRequestHeader("Authorization", "bearer ed8c0ec9c48c48d8ad88fae989135930");
+            },
+			success:function(data){
+				console.log(data);
+			}
+		})
+	})
+	$('#c').click(function(){
+		$.ajax({
+			url:'http://10.1.0.18:8080/demo/t/c',
+			type:"post",
+// 			xhrFields: {
+// 		        withCredentials: true
+// 		    },
+			beforeSend: function(request) {
+                request.setRequestHeader("Authorization", "bearer ed8c0ec9c48c48d8ad88fae989135930");
+            },
+			success:function(data){
+				console.log(data);
+			}
+		})
+	})
+})
+</script>
+</html>
